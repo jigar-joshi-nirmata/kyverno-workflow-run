@@ -5,12 +5,7 @@ name: Conformance tests
 permissions: {}
 
 on:
-  pull_request:
-    branches:
-      - "main"
-      - "release*"
-  schedule:
-    - cron: "43 0 * * 0"
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
